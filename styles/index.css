@@ -1,0 +1,17 @@
+/* NAVBAR */
+.navbar {
+  background-color: #3F4449;
+  padding: 0 4rem;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 767px) {
+  .logo-txt {
+    display: none;
+  }
+}
