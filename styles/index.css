@@ -9,10 +9,19 @@
   justify-content: space-between;
 }
 
+.link-secondary:hover {
+  color: #fff;
+}
+
+.link-success:hover {
+  color: #55ff7a;
+}
+
 /* HERO */
 .hero {
   position: relative;
 }
+
 .carousel-item {
   height: 100vh;
 }
