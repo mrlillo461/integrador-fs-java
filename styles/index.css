@@ -1,0 +1,89 @@
+/* NAVBAR */
+.navbar {
+  background-color: #3F4449;
+  padding: 0 4rem;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-secondary:hover {
+  color: #fff;
+}
+
+.link-success:hover {
+  color: #55ff7a;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carrusel-txt {
+  position: absolute;
+  max-width: 520px;
+  color: white;
+  font-weight: 500;
+  text-align: right;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -20%);
+}
+
+.boton {
+  /* display: inline-block; */
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #ffffffaa;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-image: linear-gradient(#27a944, #27a944);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: 0.5s;
+}
+
+.boton-verde {
+  background-size: 100% 100%;
+  border: 1px solid #27a944;
+  margin-left: 5px;
+}
+
+.boton:hover {
+  background-size: 100% 100%;
+  border: 1px solid #27a944;
+}
+
+.boton-verde:hover {
+  background-size: 0% 100%;
+  border: 1px solid #ffffffaa;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 767px) {
+  .logo-txt {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carrusel-txt {
+    transform: translate(-10%, -20%);
+  }
+}
