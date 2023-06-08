@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* NAVBAR */
 .navbar {
   background-color: #3F4449;
@@ -20,10 +24,11 @@
 /* HERO */
 .hero {
   position: relative;
+  margin-top: 50px;
 }
 
 .carousel-item {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .carousel-item::before {
@@ -79,8 +84,31 @@
 
 /* RESPONSIVE */
 @media screen and (max-width: 767px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 0;
+    height: 50px;
+    /* flex-wrap: nowrap; */
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .logo-txt {
     display: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  /* ORADORES */
+  .columna {
+    margin-bottom: 30px;
   }
 }
 
