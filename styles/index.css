@@ -101,16 +101,21 @@ p.text-center span {
   margin: auto;
 }
 
-.btn-custom {
+.btn_custom {
   color: #fff;
   background-color: #96c93e;
   border-color: #96c93e;
 }
 
-.btn-custom:hover {
+.btn_custom:hover {
   color: #fff;
   background-color: #198754;
   border-color: #198754;
+}
+
+/* FORMULARIO COMPRAR TICKET */
+.fs-7_custom {
+  font-size: 0.75rem;
 }
 
 /* RESPONSIVE */
@@ -183,5 +188,10 @@ p.text-center span {
   .form-orador {
     width: 100%;
     margin: auto;
+  }
+
+  /* FORMULARIO COMPRAR TICKET */
+  .fs-2_custom {
+    font-size: calc(1.25rem + 0.9vw) !important;
   }
 }

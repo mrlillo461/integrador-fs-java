@@ -47,7 +47,8 @@
             <a class="nav-link link-secondary" href="#">Conviértete en orador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-success" href="#">Comprar tickets</a>
+            <a class="nav-link link-success" data-bs-toggle="modal" data-bs-target="#modalComprarTicket"
+              href="#">Comprar tickets</a>
           </li>
         </ul>
       </div>
@@ -89,7 +90,9 @@
         nivel que tenemos para ti. Te esperamos!
       </p>
       <a href="#" class="boton">Quiero ser orador</a>
-      <a href="javascript:void(0)" class="boton boton-verde">Comprar tickets</a>
+      <a href="#" class="boton boton-verde" data-bs-toggle="modal" data-bs-target="#modalComprarTicket">
+        Comprar tickets
+      </a>
     </div>
   </section>
 
@@ -206,9 +209,69 @@
           Recuerda incluir un título para tu charla
         </p>
         <div class="d-grid">
-          <button class="btn btn-custom mb-3" type="button">Enviar</button>
+          <button class="btn btn_custom mb-3" type="button">Enviar</button>
         </div>
       </form>
+    </div>
+  </section>
+
+  <!-- FORMULARIO COMPRAR TICKET -->
+  <section class="comprar-ticket">
+    <!-- MODAL -->
+    <div class="modal fade" id="modalComprarTicket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="modalComprarTicketLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="btn-close ms-auto p-3" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+          <div class="modal-body m-auto">
+            <div class="container-fluid">
+              <div class="row row row-cols-1 row-cols-lg-3 g-1">
+                <div class="col">
+                  <div class="card text-center mb-1 border-primary">
+                    <div class="card-body">
+                      <h5 class="card-title">Estudiante</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="fw-bold">80%</p>
+                      <p class="fs-7_custom">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center mb-1 border-info">
+                    <div class="card-body">
+                      <h5 class="card-title">Trainee</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="fw-bold">50%</p>
+                      <p class="fs-7_custom">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center mb-1 border-warning">
+                    <div class="card-body">
+                      <h5 class="card-title">Junior</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="fw-bold">15%</p>
+                      <p class="fs-7_custom">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="text-center text-uppercase fs-6">
+                venta <br>
+                <b class="fs-2 fs-2_custom">
+                  valor de ticket $ <span id="precio">200</span>
+                </b>
+              </h2>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
