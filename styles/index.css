@@ -62,7 +62,6 @@ html {
 }
 
 .boton {
-  /* display: inline-block; */
   font-size: 1rem;
   text-decoration: none;
   color: #fff;
@@ -92,7 +91,27 @@ html {
   border: 1px solid #ffffffaa;
 }
 
-/* ORADORES */
+/* CONVIERTETE EN ORADOR */
+p.text-center span {
+  text-decoration: underline dotted;
+}
+
+.form-orador {
+  width: 65%;
+  margin: auto;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #96c93e;
+  border-color: #96c93e;
+}
+
+.btn-custom:hover {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 767px) {
@@ -139,6 +158,11 @@ html {
   .columna {
     margin-bottom: 30px;
   }
+
+  /* CONVIERTETE EN ORADOR */
+  .form-orador-input {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -153,5 +177,11 @@ html {
 
   .carrusel-txt {
     transform: translate(-10%, -20%);
+  }
+
+  /* CONVIERTETE EN ORADOR */
+  .form-orador {
+    width: 100%;
+    margin: auto;
   }
 }
