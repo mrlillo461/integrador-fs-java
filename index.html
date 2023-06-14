@@ -47,7 +47,8 @@
             <a class="nav-link link-secondary" href="#">Conviértete en orador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-success" href="#">Comprar tickets</a>
+            <a class="nav-link link-success" data-bs-toggle="modal" data-bs-target="#modalComprarTicket"
+              href="#">Comprar tickets</a>
           </li>
         </ul>
       </div>
@@ -89,7 +90,9 @@
         nivel que tenemos para ti. Te esperamos!
       </p>
       <a href="#" class="boton">Quiero ser orador</a>
-      <a href="javascript:void(0)" class="boton boton-verde">Comprar tickets</a>
+      <a href="#" class="boton boton-verde" data-bs-toggle="modal" data-bs-target="#modalComprarTicket">
+        Comprar tickets
+      </a>
     </div>
   </section>
 
@@ -189,12 +192,12 @@
       <form class="form-orador">
         <div class="form-orador-input row g-2">
           <div class="col form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
-            <label for="floatingInput">Nombre</label>
+            <input type="text" class="form-control" id="floatingNombreOrador" placeholder="Nombre">
+            <label for="floatingNombreOrador">Nombre</label>
           </div>
           <div class="col form-floating mb-3">
-            <input type="text" class="form-control" id="floatingPassword" placeholder="Apellido">
-            <label for="floatingPassword">Apellido</label>
+            <input type="text" class="form-control" id="floatingApellidoOrador" placeholder="Apellido">
+            <label for="floatingApellidoOrador">Apellido</label>
           </div>
         </div>
         <div class="form-floating">
@@ -206,9 +209,111 @@
           Recuerda incluir un título para tu charla
         </p>
         <div class="d-grid">
-          <button class="btn btn-custom mb-3" type="button">Enviar</button>
+          <button class="btn btn_custom mb-3" type="button">Enviar</button>
         </div>
       </form>
+    </div>
+  </section>
+
+  <!-- COMPRAR TICKET -->
+  <section class="comprar-ticket">
+    <!-- MODAL -->
+    <div class="modal fade" id="modalComprarTicket" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="modalComprarTicketLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="btn-close ms-auto p-3" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+          <div class="modal-body m-auto">
+            <div class="container-fluid">
+              <!-- DESCUENTOS -->
+              <div class="row row-cols-1 row-cols-sm-3 g-1">
+                <div class="col">
+                  <div class="card text-center mb-1 border-primary">
+                    <div class="card-body">
+                      <h5 class="card-title">Estudiante</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="fw-bold">80%</p>
+                      <p class="fs-7_custom">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center mb-1 border-info">
+                    <div class="card-body">
+                      <h5 class="card-title">Trainee</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="fw-bold">50%</p>
+                      <p class="fs-7_custom">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center mb-1 border-warning">
+                    <div class="card-body">
+                      <h5 class="card-title">Junior</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="fw-bold">15%</p>
+                      <p class="fs-7_custom">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="text-center text-uppercase fs-6 mb-3">
+                venta <br>
+                <b class="fs-2 fs-2_custom">
+                  valor de ticket $ <span id="precio">200</span>
+                </b>
+              </h2>
+              <!-- FORMULARIO COMPRA TICKETS -->
+              <form class="d-grid gap-3">
+                <div class="row row-cols-1 row-cols-sm-2 g-2 contenedorNombreApellido">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombre">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Apellido">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input type="email" class="form-control" placeholder="Correo">
+                  </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 g-2">
+                  <div class="col">
+                    <label for="cantidadCompra" class="form-label label-cantidad">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidadCompra" placeholder="Cantidad">
+                  </div>
+                  <div class="col col-categoria">
+                    <label for="categoriaCompra" class="form-label label-categoria">Categoría</label>
+                    <select class="form-select" id="categoriaCompra">
+                      <option value="1">Estudiante</option>
+                      <option value="2">Trainee</option>
+                      <option value="3">Junior</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="alert alert-primary my-2" role="alert">
+                      Total a pagar: $ <span class="total fs-5 fw-bold">0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 g-2">
+                  <div class="col d-grid">
+                    <button type="reset" class="btn btn_custom">Borrar</button>
+                  </div>
+                  <div class="col d-grid">
+                    <button type="button" class="btn btn_custom">Resumen</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
