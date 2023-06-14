@@ -192,12 +192,12 @@
       <form class="form-orador">
         <div class="form-orador-input row g-2">
           <div class="col form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
-            <label for="floatingInput">Nombre</label>
+            <input type="text" class="form-control" id="floatingNombreOrador" placeholder="Nombre">
+            <label for="floatingNombreOrador">Nombre</label>
           </div>
           <div class="col form-floating mb-3">
-            <input type="text" class="form-control" id="floatingPassword" placeholder="Apellido">
-            <label for="floatingPassword">Apellido</label>
+            <input type="text" class="form-control" id="floatingApellidoOrador" placeholder="Apellido">
+            <label for="floatingApellidoOrador">Apellido</label>
           </div>
         </div>
         <div class="form-floating">
@@ -215,10 +215,10 @@
     </div>
   </section>
 
-  <!-- FORMULARIO COMPRAR TICKET -->
+  <!-- COMPRAR TICKET -->
   <section class="comprar-ticket">
     <!-- MODAL -->
-    <div class="modal fade" id="modalComprarTicket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="modalComprarTicket" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="modalComprarTicketLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
@@ -226,7 +226,8 @@
           </button>
           <div class="modal-body m-auto">
             <div class="container-fluid">
-              <div class="row row row-cols-1 row-cols-lg-3 g-1">
+              <!-- DESCUENTOS -->
+              <div class="row row-cols-1 row-cols-sm-3 g-1">
                 <div class="col">
                   <div class="card text-center mb-1 border-primary">
                     <div class="card-body">
@@ -258,17 +259,58 @@
                   </div>
                 </div>
               </div>
-              <h2 class="text-center text-uppercase fs-6">
+              <h2 class="text-center text-uppercase fs-6 mb-3">
                 venta <br>
                 <b class="fs-2 fs-2_custom">
                   valor de ticket $ <span id="precio">200</span>
                 </b>
               </h2>
+              <!-- FORMULARIO COMPRA TICKETS -->
+              <form class="d-grid gap-3">
+                <div class="row row-cols-1 row-cols-sm-2 g-2 contenedorNombreApellido">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombre">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Apellido">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input type="email" class="form-control" placeholder="Correo">
+                  </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 g-2">
+                  <div class="col">
+                    <label for="cantidadCompra" class="form-label label-cantidad">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidadCompra" placeholder="Cantidad">
+                  </div>
+                  <div class="col col-categoria">
+                    <label for="categoriaCompra" class="form-label label-categoria">Categoría</label>
+                    <select class="form-select" id="categoriaCompra">
+                      <option value="1">Estudiante</option>
+                      <option value="2">Trainee</option>
+                      <option value="3">Junior</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="alert alert-primary my-2" role="alert">
+                      Total a pagar: $ <span class="total fs-5 fw-bold">0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 g-2">
+                  <div class="col d-grid">
+                    <button type="reset" class="btn btn_custom">Borrar</button>
+                  </div>
+                  <div class="col d-grid">
+                    <button type="button" class="btn btn_custom">Resumen</button>
+                  </div>
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>

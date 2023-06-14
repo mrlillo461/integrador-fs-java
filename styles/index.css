@@ -118,7 +118,26 @@ p.text-center span {
   font-size: 0.75rem;
 }
 
-/* RESPONSIVE */
+/*--- RESPONSIVE ---*/
+
+/* BREAKPOINT 575px */
+@media screen and (max-width: 575px) {
+
+  .contenedorNombreApellido {
+    --bs-gutter-y: 1rem;
+  }
+
+  .label-cantidad {
+    display: none;
+  }
+
+  .col-categoria {
+    display: grid;
+    justify-items: center;
+  }
+}
+
+/* BREAKPOINT 767px */
 @media screen and (max-width: 767px) {
 
   /* NAVBAR */
@@ -170,6 +189,7 @@ p.text-center span {
   }
 }
 
+/* BREAKPOINT 1200px */
 @media screen and (max-width: 1200px) {
 
   /* NAVBAR */
