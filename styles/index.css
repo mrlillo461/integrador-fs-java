@@ -118,6 +118,21 @@ p.text-center span {
   font-size: 0.75rem;
 }
 
+/* FOOTER */
+.main-footer {
+  background-image: linear-gradient(to right, #1d3744, #1c455b, #1f5271);
+}
+
+.footer-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.footer-link {
+  pointer-events: none;
+  text-decoration: none;
+}
+
 /*--- RESPONSIVE ---*/
 
 /* BREAKPOINT 575px */
@@ -186,6 +201,19 @@ p.text-center span {
   /* CONVIERTETE EN ORADOR */
   .form-orador-input {
     display: block;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #1d3744, #1c455b, #1f5271);
+  }
+}
+
+/* BREAKPOINT 991px */
+@media screen and (max-width: 991px) {
+  .footer-container {
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
